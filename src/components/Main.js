@@ -74,7 +74,7 @@ const Main = () => {
 
     useEffect(() => {
         switchCase(stat)
-
+        // getChartValue()
     }, [stat])
 
     useEffect(() => {
@@ -92,7 +92,10 @@ const Main = () => {
                 <div className='inputArea'>
                     <div className='stat'>
                         Category:
-                        <select value={stat} onChange={(e) => setStat(e.target.value)}>
+                        <select value={stat} onChange={(e) => {
+                            setStat(e.target.value)
+                            setShowChart(false)
+                        }}>
                             <option value="cases">Cases</option>
                             <option value="mortality">Mortality</option>
                             <option value="recovered">Recovered</option>

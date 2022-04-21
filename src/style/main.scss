@@ -73,10 +73,15 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        &:nth-of-type(odd){
+          background-color: whitesmoke;
+        }
         & div{
           width: 100px;
           text-align: center;
+
         }
+
       }
 
     }
